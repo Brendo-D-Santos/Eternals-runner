@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #eee;
+    min-height: 100vh;
+}
+
+.game-header {
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 1px solid #333;
+}
+
+.game-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.game-header p {
+    color: #aaa;
+}
+
+.game-container {
+    width: min(1100px, 95%);
+    margin: 30px auto;
+}
+
+.controls {
+    background: #1b1b1b;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.controls h2 {
+    margin-bottom: 15px;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button {
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 12px 18px;
+    background: #252525;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #333;
+}
+
+#game {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+}
+
+.panel {
+    background: #181818;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.player-panel {
+    grid-row: span 3;
+}
+
+.player-panel h2,
+.battle-panel h2,
+.game-log h2 {
+    margin-bottom: 15px;
+}
+
+.player-panel p {
+    margin: 8px 0;
+}
+
+.dialogue-panel {
+    min-height: 300px;
+}
+
+.speaker {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.dialogue-text {
+    min-height: 100px;
+    font-size: 18px;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+.dialogue-choices {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dialogue-choices button {
+    text-align: left;
+}
+
+.battle-panel {
+    min-height: 180px;
+}
+
+.battle {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.battle button {
+    margin-top: 5px;
+}
+
+.game-log {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.game-log p {
+    padding: 8px 0;
+    border-bottom: 1px solid #292929;
+}
+
+@media (max-width: 700px) {
+
+    #game {
+        grid-template-columns: 1fr;
+    }
+
+    .player-panel {
+        grid-row: auto;
+    }
+
+    .game-header h1 {
+        font-size: 28px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
